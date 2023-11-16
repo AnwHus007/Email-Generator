@@ -10,4 +10,4 @@
 ```
  streamlit run Home.py
 ```
-* [WebApp:]([https://anwhus007-ml-model-playground-home-letebd.streamlit.app](https://email-generator-5jqeh8xtmbt7q7fkgg3tg7.streamlit.app/)https://email-generator-5jqeh8xtmbt7q7fkgg3tg7.streamlit.app/)<br><br>
+* [WebApp:](https://email-generator-5jqeh8xtmbt7q7fkgg3tg7.streamlit.app/)<br><br>
