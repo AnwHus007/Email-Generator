@@ -5,11 +5,11 @@ sentiment_pipeline = pipeline("sentiment-analysis")
 # initialize the models
 openai = OpenAI(
     model_name="text-davinci-003",
-    openai_api_key="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"
+    openai_api_key="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"
 )
 def generate_email(content, tone, recipient_type,recipient_name,sender_name):
     # Prompt
-    prompt = f"Generate a professional email to a {recipient_type} with an elaboration on the following content: '{content}' and set the tone to {tone}. The name of the recipient is {recipient_name} and name of the sender is {sender_name}.If the recipient is a Boss the salutation should be Respected Sir/Madam"
+    prompt = f"Generate a professional email to a {recipient_type} with an elaboration on the following content: '{content}' and set the tone to {tone}. The name of the recipient is {recipient_name} and name of the sender is {sender_name}"
 
     response = openai(prompt)
     return response
