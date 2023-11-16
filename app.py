@@ -9,7 +9,7 @@ openai = OpenAI(
 )
 def generate_email(content, tone, recipient_type,recipient_name,sender_name):
     # Prompt
-    prompt = f"Generate a professional email to a {recipient_type} with an elaboration on the following content: '{content}' and set the tone to {tone}. The name of the recipient is {recipient_name} and name of the sender is {sender_name}"
+    prompt = f"Generate a professional email to a {recipient_type} with an elaboration on the following content: '{content}' and set the tone to {tone}. The name of the recipient is {recipient_name} and name of the sender is {sender_name}.If the recipient is a Boss the salutation should be Respected Sir/Madam"
 
     response = openai(prompt)
     return response
