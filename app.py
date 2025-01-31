@@ -1,17 +1,19 @@
 import streamlit as st
-from langchain.llms import OpenAI
+from langchain.llms import Gemini
 from transformers import pipeline
 sentiment_pipeline = pipeline("sentiment-analysis")
 # initialize the models
-openai = OpenAI(
-    model_name="text-davinci-003",
-    openai_api_key="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"
+your_api_key = st.secrets["API_KEY"]
+gemini = Gemini(
+    model="gemini-1.5-flash",
+    api_key=your_api_key
 )
+
 def generate_email(content, tone, recipient_type,recipient_name,sender_name):
     # Prompt
     prompt = f"Generate a professional email to a {recipient_type} with an elaboration on the following content: '{content}' and set the tone to {tone}. The name of the recipient is {recipient_name} and name of the sender is {sender_name}"
 
-    response = openai(prompt)
+    response = gemini(prompt)
     return response
 
 # Example usage
